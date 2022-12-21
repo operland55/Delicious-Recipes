@@ -1,7 +1,12 @@
 import { useState } from "react";
+import Home from "./Components/Home";
 
 function App() {
-	return <div className="App"></div>;
+	return (
+		<>
+			<Home />
+		</>
+	);
 }
 
 export default App;
