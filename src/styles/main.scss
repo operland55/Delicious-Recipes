@@ -1,6 +1,7 @@
 @import "./constants/breakpoints";
 
 @import "./base/reset";
+@import "./base/global";
 
 @import "./mixin/flexbox";
 @import "./mixin/line-clamp";
@@ -11,4 +12,6 @@
 
 @import "./layout/grid";
 
-@import "./components/asdasd";
+@import "./components/banner";
+@import "./components/header";
+@import "./components/menuSide";
