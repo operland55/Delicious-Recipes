@@ -1,6 +1,7 @@
 import React from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import Logo from "../assets/Logo.png";
+import Logo from "../Img/Logo.png";
+
 import { useRecoilState } from "recoil";
 import { MenuBtn } from "../atom";
 const Header = () => {
