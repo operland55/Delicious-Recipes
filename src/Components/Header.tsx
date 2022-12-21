@@ -1,6 +1,6 @@
 import React from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import Logo from "../Img/Logo.png";
+// import Logo from "../Img/Logo.png";
 
 import { useRecoilState } from "recoil";
 import { MenuBtn } from "../atom";
@@ -10,9 +10,7 @@ const Header = () => {
 	return (
 		<nav>
 			<div className="top-header">
-				<div className="logo">
-					<img src={Logo} alt="Logo-img" />
-				</div>
+				<div className="logo">{/* <img src={Logo} alt="Logo-img" /> */}</div>
 			</div>
 
 			<div className="bottom-header active">
