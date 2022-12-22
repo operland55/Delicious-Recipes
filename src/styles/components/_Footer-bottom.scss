@@ -1,0 +1,29 @@
+.footer-bottom {
+	background-color: #222;
+	color: #fff;
+	padding: 30px 0;
+	&-contact {
+		@include column-flexbox(start, start);
+		gap: 10px;
+		p {
+			font-size: 16px;
+			span {
+				color: red;
+			}
+		}
+		.footer-icons {
+			@include flexbox;
+			gap: 10px;
+			svg {
+				width: 24px;
+				font-size: 18px;
+			}
+		}
+	}
+	@include responsive(D) {
+		&-contact {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+}
