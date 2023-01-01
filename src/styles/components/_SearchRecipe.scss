@@ -1,0 +1,35 @@
+.recipe {
+	padding: 120px 15px;
+	height: 440px;
+	position: relative;
+	background-color: #f1f2f6;
+	&-search {
+		@include column-flexbox;
+
+		form {
+			width: 100%;
+			margin-top: 30px;
+			.inputBox {
+				@include flexbox(start, start);
+				background-color: rgba(255, 255, 255, 0.75);
+				padding: 20px 10px;
+				border-radius: 16px;
+
+				input {
+					width: 100%;
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+	@include responsive(T) {
+		&-search {
+			h1 {
+				font-size: 48px;
+			}
+			form {
+				width: 50%;
+			}
+		}
+	}
+}
