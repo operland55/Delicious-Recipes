@@ -1,0 +1,71 @@
+.services {
+	padding: 0 5vw;
+	margin-bottom: 50px;
+	&-text {
+		text-align: center;
+		padding-bottom: 70px;
+		h1 {
+			margin-bottom: 10px;
+		}
+		p {
+			font-size: 16px;
+			color: #666;
+		}
+	}
+	&-items {
+		li {
+			.img-box {
+				overflow: hidden;
+				width: 100%;
+				height: 273px;
+				img {
+					display: block;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					transition: 350ms;
+				}
+				img:hover {
+					transform: scale(1.2);
+				}
+			}
+			.services-info {
+				h3 {
+					padding: 20px 0;
+				}
+				p {
+					color: #666;
+					margin-bottom: 16px;
+				}
+			}
+		}
+		li:hover {
+			h3 {
+				color: red;
+			}
+		}
+	}
+	@include responsive(T) {
+		&-items {
+			li {
+				@include flexbox(start, center);
+				gap: 0 20px;
+			}
+			.onion {
+				flex-direction: row-reverse;
+			}
+		}
+	}
+	@include responsive(D) {
+		&-items {
+			@include flexbox(start, start);
+			gap: 0 30px;
+			li {
+				display: block;
+				.img-box {
+					height: 243px;
+				}
+			}
+		}
+	}
+}
