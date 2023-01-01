@@ -9,9 +9,19 @@
 @import "./mixin/responsive";
 @import "./mixin/scrollbar";
 @import "./mixin/truncate";
+@import "./mixin/button";
 
 @import "./layout/grid";
 
 @import "./components/banner";
+@import "./components/AboutBanner";
+@import "./components/AboutServices";
 @import "./components/header";
 @import "./components/menuSide";
+@import "./components/HomeAbout";
+@import "./components/HomeMenu";
+@import "./components/HomeGallery";
+@import "./components/Question";
+@import "./components/SearchRecipe";
+@import "./components/Footer";
+@import "./components/Footer-bottom";
