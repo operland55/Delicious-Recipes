@@ -1,8 +1,8 @@
 import React from "react";
 import HomeAbout from "./About/HomeAbout";
 import HomeGallery from "./Gallery/HomeGallery";
+import Banner from "./Home/Banner";
 
-import Banner from "./home/banner";
 import HomeMenu from "./Menu/HomeMenu";
 import Question from "./Question";
 import SearchRecipe from "./Search/SearchRecipe";
