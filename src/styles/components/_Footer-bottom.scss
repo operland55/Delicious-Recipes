@@ -1,7 +1,7 @@
 .footer-bottom {
 	background-color: #222;
 	color: #fff;
-	padding: 30px 0;
+	padding: 30px 15px;
 	&-contact {
 		@include column-flexbox(start, start);
 		gap: 10px;
