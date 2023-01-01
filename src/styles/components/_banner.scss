@@ -1,9 +1,10 @@
 .banner {
-	width: 100%;
+	width: 100vw;
 	height: 767px;
 	background: url("/src/assets/hero-bg.jpg") center center / cover;
 
 	.banner-area {
+		@include buttonStyle;
 		color: #fff;
 		padding: 284px 15px 0;
 		h6 {
@@ -22,22 +23,6 @@
 			margin-bottom: 30px;
 			max-width: 515px;
 			font-size: 15px;
-		}
-		button {
-			display: inline-block;
-			background: #f42f2c;
-			height: 42px;
-			padding: 0 30px;
-			border: none;
-			color: #fff;
-			font-size: 14px;
-			font-weight: 700;
-			text-transform: uppercase;
-			border-radius: 6px;
-			transition: 350ms;
-		}
-		button:hover {
-			background-color: #222;
 		}
 	}
 	@include responsive(T) {
