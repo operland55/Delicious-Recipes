@@ -1,0 +1,71 @@
+.question-container {
+	color: #fff;
+	position: relative;
+	padding: 120px 15px;
+	background: url("/src/assets/reservation-bg.jpg") center center / cover;
+
+	.overlay {
+		background: rgba(17, 22, 24, 0.75);
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+	.question {
+		position: relative;
+		&-text {
+			h2 {
+				font-size: 28px;
+			}
+			p {
+				margin-bottom: 16px;
+				padding-top: 20px;
+				font-size: 18px;
+			}
+		}
+		&-form {
+			padding: 0.5vh;
+			margin-top: 50px;
+
+			form {
+				border-radius: 8px;
+				padding: 100px 40px;
+				background-color: #fff;
+				.question-form-item {
+					border: 1px solid #ced4da;
+					margin-bottom: 10px;
+					input,
+					select {
+						padding: 10px;
+					}
+					select,
+					textarea {
+						width: 100%;
+					}
+					textarea {
+						height: 100px;
+					}
+				}
+				.form-button {
+					@include buttonStyle;
+					text-align: center;
+				}
+			}
+		}
+	}
+	@include responsive(T) {
+		.question {
+			@include flexbox(between);
+			&-text {
+				width: 50%;
+			}
+			&-form {
+				width: 40%;
+				form {
+					// padding: 50px 20px;
+				}
+			}
+		}
+	}
+}
