@@ -1,0 +1,18 @@
+@mixin buttonStyle() {
+	button {
+		display: inline-block;
+		background: #f42f2c;
+		height: 42px;
+		padding: 0 30px;
+		border: none;
+		color: #fff;
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+		border-radius: 6px;
+		transition: 350ms;
+	}
+	button:hover {
+		background-color: #222;
+	}
+}
