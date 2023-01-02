@@ -1,4 +1,16 @@
 .aboutbanner {
+	position: relative;
 	height: 440px;
 	background: url("/src/assets/hero-bg.jpg") center center / cover;
+	.title {
+		margin-top: 185px;
+		padding: 90px 0;
+		color: #fff;
+		@include column-flexbox;
+		gap: 10px 0;
+		p {
+			@include flexbox;
+			gap: 0 10px;
+		}
+	}
 }
