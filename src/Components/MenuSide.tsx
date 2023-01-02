@@ -6,7 +6,8 @@ import { MenuBtn } from "../atom";
 const MenuSide = () => {
 	const [Menu, setMenu] = useRecoilState(MenuBtn);
 	const navigate = useNavigate();
-	const list = ["Home", "about", "menu", "gallery", "blog", "search", "concat"];
+	const list = ["Home", "About", "Menu", "Gallery", "Blog", "Search", "Concat"];
+
 	return (
 		<nav className="sm-only">
 			<ul className={Menu ? "menuItem active sm-only" : "menuItem sm-only"}>
@@ -15,6 +16,7 @@ const MenuSide = () => {
 						key={key}
 						onClick={() => {
 							navigate(`/${item}`);
+							window.scrollTo(0, 0);
 						}}
 					>
 						{item}

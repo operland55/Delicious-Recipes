@@ -8,7 +8,7 @@ import { MenuBtn } from "../atom";
 const Header = () => {
 	const [Menu, setMenu] = useRecoilState(MenuBtn);
 	const navigate = useNavigate();
-	const list = ["Home", "about", "menu", "gallery", "blog", "search", "concat"];
+	const list = ["Home", "About", "Menu", "Gallery", "Blog", "Search", "Concat"];
 
 	return (
 		<nav>
@@ -42,7 +42,8 @@ const Header = () => {
 						<li
 							key={key}
 							onClick={() => {
-								navigate(`${item}`);
+								navigate(item === "Home" ? `/` : `${item}`);
+								window.scrollTo(0, 0);
 							}}
 						>
 							{item}
