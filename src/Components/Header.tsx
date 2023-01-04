@@ -5,7 +5,12 @@ import Logo from "../assets/Logo.png";
 
 import { useRecoilState } from "recoil";
 import { MenuBtn } from "../atom";
+import { useState } from "react";
+import { useRef } from "react";
+import { useEffect } from "react";
 const Header = () => {
+	const [active, setActive] = useState("");
+	const targetRef = useRef(null);
 	const [Menu, setMenu] = useRecoilState(MenuBtn);
 	const navigate = useNavigate();
 	const list = [
@@ -17,10 +22,19 @@ const Header = () => {
 		"Search",
 		"Contact",
 	];
-
+	const handleScroll = () => {
+		if (window.scrollY > 0) {
+			setActive("active");
+		} else {
+			setActive("");
+		}
+	};
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll);
+	}, []);
 	return (
-		<nav>
-			<div className="top-header">
+		<nav className={active}>
+			<div className={`top-header ${active}`}>
 				<div
 					className="logo"
 					onClick={() => {
@@ -31,7 +45,7 @@ const Header = () => {
 				</div>
 			</div>
 
-			<div className="bottom-header active">
+			<div className={`bottom-header ${active}`}>
 				<p className="sm-only">Menu</p>
 				<div className="menu-icon  sm-only">
 					{Menu ? (
