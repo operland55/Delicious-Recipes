@@ -1,5 +1,6 @@
 import React from "react";
 import HomeAbout from "./About/HomeAbout";
+import HomeContact from "./Contact/HomeContact";
 import HomeGallery from "./Gallery/HomeGallery";
 import Banner from "./Home/Banner";
 
@@ -15,6 +16,7 @@ const Home = () => {
 			<Question />
 			<HomeGallery />
 			<SearchRecipe />
+			<HomeContact />
 		</>
 	);
 };
