@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./Components/About/About";
+import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer";
 import Gallery from "./Components/Gallery/Gallery";
 import Header from "./Components/Header";
@@ -20,6 +21,7 @@ function App() {
 					<Route path="/Menu" element={<Menu />}></Route>
 					<Route path="/Gallery" element={<Gallery />}></Route>
 					<Route path="/Search" element={<Search />}></Route>
+					<Route path="/Contact" element={<Contact />}></Route>
 				</Routes>
 
 				<Footer />
