@@ -1,6 +1,5 @@
 .recipe {
 	padding: 120px 15px;
-	// height: 440px;
 	position: relative;
 	background-color: #f1f2f6;
 	overflow: hidden;
@@ -46,6 +45,8 @@
 					overflow: hidden;
 					text-overflow: ellipsis;
 					white-space: nowrap;
+					text-align: center;
+					margin-top: 20px;
 				}
 			}
 		}
