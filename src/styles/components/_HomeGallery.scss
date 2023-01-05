@@ -32,6 +32,10 @@
 			padding: 12px 0;
 			border-right: 1px solid #edf6ff;
 		}
+		li:hover {
+			background-color: rgb(236, 112, 112);
+			color: #fff;
+		}
 	}
 	&-img {
 		@include flexbox;
@@ -75,7 +79,9 @@
 	@include responsive(D) {
 		padding: 120px 15px;
 		&-img {
+			justify-content: start;
 			li {
+				max-width: 350px;
 				img {
 					width: 100%;
 					max-height: 370px;
