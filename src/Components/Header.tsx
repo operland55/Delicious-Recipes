@@ -13,15 +13,7 @@ const Header = () => {
 	const targetRef = useRef(null);
 	const [Menu, setMenu] = useRecoilState(MenuBtn);
 	const navigate = useNavigate();
-	const list = [
-		"Home",
-		"About",
-		"Menu",
-		"Gallery",
-		"Blog",
-		"Search",
-		"Contact",
-	];
+	const list = ["Home", "About", "Menu", "Gallery", "Search", "Contact"];
 	const handleScroll = () => {
 		if (window.scrollY > 0) {
 			setActive("active");

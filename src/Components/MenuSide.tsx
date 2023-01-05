@@ -6,15 +6,7 @@ import { MenuBtn } from "../atom";
 const MenuSide = () => {
 	const [Menu, setMenu] = useRecoilState(MenuBtn);
 	const navigate = useNavigate();
-	const list = [
-		"Home",
-		"About",
-		"Menu",
-		"Gallery",
-		"Blog",
-		"Search",
-		"Contact",
-	];
+	const list = ["Home", "About", "Menu", "Gallery", "Search", "Contact"];
 
 	return (
 		<nav className="sm-only">
