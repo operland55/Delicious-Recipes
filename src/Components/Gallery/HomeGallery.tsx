@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { MenuInfo, MenuList } from "../../foodInfo";
 
 const HomeGallery = () => {
+	const [value, setValue] = useState(undefined);
+
+	const filter = (e) => {
+		let valueArr = e.currentTarget.dataset.filter;
+		if (valueArr === "All Menu") {
+			setValue(undefined);
+		} else {
+			setValue(valueArr);
+		}
+	};
+
+	const gallery = MenuInfo.filter((item) => item.eatingTime === value);
+
 	return (
 		<div className="gallery">
 			<div className="container">
@@ -14,18 +27,29 @@ const HomeGallery = () => {
 
 						<ul className="gallery-list">
 							{MenuList.map((item, key) => (
-								<li className={`gallery-list-item`} key={item}>
+								<li
+									className={`gallery-list-item`}
+									key={item}
+									data-filter={item}
+									onClick={filter}
+								>
 									{item}
 								</li>
 							))}
 						</ul>
 
 						<ul className="gallery-img">
-							{MenuInfo.map((item, key) => (
-								<li className={`gallery-img-${key + 1}`} key={key}>
-									<img src={item.img} alt="Gallery-Img" />
-								</li>
-							))}
+							{value == undefined
+								? MenuInfo.map((item, key) => (
+										<li className={`gallery-img-${key + 1}`} key={key}>
+											<img src={item.img} alt="Gallery-Img" />
+										</li>
+								  ))
+								: gallery.map((item, key) => (
+										<li className={`gallery-img-${key + 1}`} key={key}>
+											<img src={item.img} alt="Gallery-Img" />
+										</li>
+								  ))}
 						</ul>
 					</div>
 				</div>

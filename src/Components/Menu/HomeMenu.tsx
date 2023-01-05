@@ -1,20 +1,19 @@
 import React, { useState } from "react";
 import { MenuInfo, MenuList } from "../../foodInfo";
 const HomeMenu = () => {
-	const [eatTime, setEatTime] = useState("menu-filter-item invisible");
-	const filter = (e) => {
-		const filter = e.currentTarget.dataset.filter;
+	const [eatTime, setEatTime] = useState("menu-filter-item");
+	const [value, setValue] = useState(undefined);
 
-		MenuInfo.forEach((item) => {
-			if (filter === "All Menu" || filter == item.eatingTime) {
-				setEatTime("menu-filter-item invisible");
-				console.log("eat", item.eatingTime);
-				console.log("filter", filter);
-			} else {
-				setEatTime("menu-filter-item");
-			}
-		});
+	const filter = (e) => {
+		let valueArr = e.currentTarget.dataset.filter;
+		if (valueArr === "All Menu") {
+			setValue(undefined);
+		} else {
+			setValue(valueArr);
+		}
 	};
+
+	const menu = MenuInfo.filter((item) => item.eatingTime === value);
 
 	return (
 		<div className="HomeMenu">
@@ -36,23 +35,41 @@ const HomeMenu = () => {
 							</ul>
 
 							<div className="menu-filter">
-								{MenuInfo.map((item, key) => (
-									<div
-										className={eatTime}
-										key={key}
-										data-name={item.eatingTime}
-									>
-										<div className="menu-filter-info">
-											<div className="menu-filter-info-name">
-												<h3>{item.name}</h3>
-												<p>{item.price}</p>
+								{value == undefined
+									? MenuInfo.map((item, key) => (
+											<div
+												className={eatTime}
+												key={key}
+												data-name={item.eatingTime}
+											>
+												<div className="menu-filter-info">
+													<div className="menu-filter-info-name">
+														<h3>{item.name}</h3>
+														<p>{item.price}</p>
+													</div>
+													<div className="menu-filter-explan">
+														{item.Explanation}
+													</div>
+												</div>
 											</div>
-											<div className="menu-filter-explan">
-												{item.Explanation}
+									  ))
+									: menu.map((item, key) => (
+											<div
+												className={eatTime}
+												key={key}
+												data-name={item.eatingTime}
+											>
+												<div className="menu-filter-info">
+													<div className="menu-filter-info-name">
+														<h3>{item.name}</h3>
+														<p>{item.price}</p>
+													</div>
+													<div className="menu-filter-explan">
+														{item.Explanation}
+													</div>
+												</div>
 											</div>
-										</div>
-									</div>
-								))}
+									  ))}
 							</div>
 						</div>
 					</div>
