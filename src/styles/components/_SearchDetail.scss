@@ -1,0 +1,62 @@
+.detail {
+	@include pos-center;
+	left: 0;
+	svg {
+		position: absolute;
+		right: 15px;
+		top: 10px;
+		font-size: 24px;
+		cursor: pointer;
+	}
+	svg:hover {
+		color: red;
+	}
+	&-info {
+		position: fixed;
+		width: 100vw;
+		min-height: 50vh;
+		padding: 0 15px;
+		color: #222;
+		background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+		.textImgBox {
+			padding: 20px 0;
+			p {
+				font-size: 24px;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+			.img-box {
+				margin: 0 auto;
+				width: 80%;
+				img {
+					border-radius: 8px;
+					width: 100%;
+					height: auto;
+					object-fit: cover;
+				}
+			}
+		}
+		.recipe-lists {
+			padding: 50px 0;
+
+			li {
+				padding: 10px;
+				h1 {
+					text-align: center;
+				}
+			}
+		}
+	}
+	@include responsive(D) {
+		left: 25%;
+		&-info {
+			@include flexbox(start, start);
+			width: 50vw;
+			// height: 75vh;
+			margin: 0 auto;
+			.textImgBox {
+				margin-top: 50px;
+			}
+		}
+	}
+}
