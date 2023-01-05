@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./Components/About/About";
-import Blog from "./Components/Blog";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer";
 import Gallery from "./Components/Gallery/Gallery";
@@ -23,16 +22,10 @@ function App() {
 					<Route path="/About" element={<About />}></Route>
 					<Route path="/Menu" element={<Menu />}></Route>
 					<Route path="/Gallery" element={<Gallery />}></Route>
-					<Route path="/Blog" element={<Blog />}></Route>
 					<Route path="/Search" element={<Search />}>
-						<Route path="/Search/:title" element={<SearchList />}>
-							<Route
-								path="/Search/:title/:id"
-								element={<SearchDetail />}
-							></Route>
-						</Route>
+						<Route path="/Search/:title" element={<SearchList />}></Route>
+						<Route path="/Search/:title/:id" element={<SearchDetail />}></Route>
 					</Route>
-
 					<Route path="/Contact" element={<Contact />}></Route>
 				</Routes>
 
