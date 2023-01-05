@@ -36,7 +36,7 @@ const HomeContact = () => {
 							<div className="contactInfo">
 								<ul>
 									{myInfo.map((item, key) => (
-										<li>
+										<li key={key}>
 											<div className="icon">{item.icon}</div>
 											<p>{item.info}</p>
 										</li>
