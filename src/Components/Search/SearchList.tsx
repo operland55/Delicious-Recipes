@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { DetailBtn } from "../../atom";
 
 const SearchList = () => {
-	const api = "7d141da6f44b471d9643dc861ff6cc00";
+	const setBtn = useSetRecoilState(DetailBtn);
+	const api = "d9ed831d48d94f28b8f9aa33d2de1a8a";
 	const navigate = useNavigate();
 	const [searchedRecipes, setSearchedRecipes] = useState<any[]>([]);
 	const searchName = useParams();
@@ -31,6 +34,7 @@ const SearchList = () => {
 									alt="Food-Img"
 									onClick={() => {
 										navigate(`/search/${searchName.title}/${item.id}`);
+										setBtn(true);
 									}}
 								/>
 								<p>{item?.title}</p>
