@@ -13,3 +13,11 @@ Router,useEffect,간단한 Recoil atom
 ![scroll](https://user-images.githubusercontent.com/76529606/210919545-04a0ed32-d3c7-44ab-81ea-05f240244ebc.jpg)
 1. 스크롤을 내리면 내비게이션이 숨겨지는 기능
 2. 스크롤을 올리면 숨겨져있던 내비게이션이 다시 나오도록 작성
+### Menu, Gallery Filter기능
+
+![filter사진](https://user-images.githubusercontent.com/76529606/210919785-9016c860-37f5-4348-b8f2-e73423129cdb.jpg)
+![화면 캡처 2023-01-06 114413](https://user-images.githubusercontent.com/76529606/210919797-8e05c9ea-f442-400b-aace-17bc42a72a18.jpg)
+
+nav 메뉴를 누르면 그거에 맞기 사진이과 메뉴가 나온다
+
+### Search 기능
