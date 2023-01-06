@@ -21,3 +21,14 @@ Router,useEffect,간단한 Recoil atom
 nav 메뉴를 누르면 그거에 맞기 사진이과 메뉴가 나온다
 
 ### Search 기능
+![화면 캡처 2023-01-06 114449](https://user-images.githubusercontent.com/76529606/210919902-3fada445-856b-44bd-a45e-da6a2fb21be2.jpg)
+
+#### 원하는 음식을 검색하면 화면에 나타난다
+
+![화면 캡처 2023-01-06 114509](https://user-images.githubusercontent.com/76529606/210919962-87fe3d08-f0be-4b1b-86f2-9ef6994a5ec4.jpg)
+
+#### 화면에 나타난 음식들중 마음에 드는 것 중에서 선택을 하면 화면에 Recipe 박스가 나오게 만들었다
+
+![화면 캡처 2023-01-06 114531](https://user-images.githubusercontent.com/76529606/210920042-f3912ed1-ab23-4bf4-bbec-651d57bb49e5.jpg)
+
+#### 만약 오타나 또는 없는 음식이면 없는 데이터라고 화면에 
